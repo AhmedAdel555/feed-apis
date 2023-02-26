@@ -50,7 +50,7 @@ exports.login = (req, res, next) => {
                 "adetlohmfo27a2omAANNR", 
                 {expiresIn: "24h"})
 
-            res.status(200).json({message: "login succeded", toke: token, userId: user._id.toString()})
+            res.status(200).json({message: "login succeded", token: token, expiresIn: "24h" ,userId: user._id.toString()})
         }catch(err){
             if(!err.statusCode){
                 err.statusCode = 500
