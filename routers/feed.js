@@ -41,7 +41,7 @@ uploadImages.single("image"),
 [
     body('title').trim().isLength({min: 5}),
     body('content').trim().isLength({min: 5})
-], feedController.updatePost)
+], checkAuth ,feedController.updatePost)
 
 router.delete("/post/:postId", checkAuth ,feedController.deletePost)
 

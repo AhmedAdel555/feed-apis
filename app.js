@@ -24,7 +24,7 @@ app.use((error, req, res, next) => {
     res.status(error.statusCode || 500 ).json({message: error.message, data: error.data})
 })
 mongoose.set("strictQuery", false)
-mongoose.connect("mongodb+srv://ahmedadel:Ahmed3ff72@cluster0.wktfawr.mongodb.net/socialMediaApp?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://ahmedadel:s0BCc474059RdFzj@cluster0.wktfawr.mongodb.net/socialMediaApp?retryWrites=true&w=majority")
 .then((result) => {
     app.listen( process.env.PORT || 8080)
 }).catch((err) => {
